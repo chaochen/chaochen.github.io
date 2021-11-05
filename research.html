@@ -9,7 +9,7 @@
 <table summary="Table for page layout." id="tlayout">
 <tbody><tr valign="top">
 <td id="layout-menu">
-<div class="menu-category"><img class="menu" src="images/ChaoChen-Profile-tiny.png" width="100px" align="center"></div>
+<div class="menu-category"><img class="menu" src="images/ChaoChen-Profile-tiny.png" width="120px" align="center"></div>
 <div class="menu-item"><a href="index.html">Home</a></div>
 <div class="menu-item"><a href="research.html" class="current">Research</a></div>
 <div class="menu-item"><a href="publication.html">Publications</a></div>
@@ -22,18 +22,185 @@
 <td id="layout-content">
 <div id="toptitle">
     <h1>Chao Chen</h1> <!-- <p><i><a href="https://www.howtopronounce.com/quanquan">pronunciation</a></i></p> -->
- <br>
-<div id="subtitle">Assistant Professor</div>
-<div id="subtitle">Department of <a href="https://bmi.stonybrookmedicine.edu/"><u>Biomedical Informatics</u></a></div>
-<div id="subtitle">Also affiliated with <a href="https://www.cs.stonybrook.edu/"><u>Computer Science</u></a></div>
-<div id="subtitle">and <a href="https://www.stonybrook.edu/commcms/ams/"><u>Applied Mathematics & Statistics</u></a></div>
-<div id="subtitle"><a href="https://www.stonybrook.edu/"><u>Stony Brook University</u></a></div>
-<div id="subtitle"><a href="http://www.ucla.edu">Stony Brook, NY 11794-8322</a></div>
+<!-- <div id="subtitle">Assistant Professor</div> -->
+<!-- <div id="subtitle">Department of <a href="https://bmi.stonybrookmedicine.edu/"><u>Biomedical Informatics</u></a></div> -->
+<!-- <div id="subtitle">Also affiliated with <a href="https://www.cs.stonybrook.edu/"><u>Computer Science</u></a></div> -->
+<!-- <div id="subtitle">and <a href="https://www.stonybrook.edu/commcms/ams/"><u>Applied Mathematics & Statistics</u></a></div> -->
+<!-- <div id="subtitle"><a href="https://www.stonybrook.edu/"><u>Stony Brook University</u></a></div> -->
+<!-- <div id="subtitle"><a href="http://www.ucla.edu">Stony Brook, NY 11794-8322</a></div> -->
 </div>
 
 <!-- ==================================================================================================== -->
 
+ 
+  <p>I explore geometric and topological properties of data. These global and robust information can provide
+  insight for modern data and image analytics. My research draws from the following different domains.</p>
+  <ul>
+  <li><p><b>Biomedical imaging informatics</b>: topology-informed image segmentation, generation and analysis.</p></li>
+  <li><p><b>Machine learning</b>: robustness of deep neural networks, label noise, graph neural networks.</p></li>
+  <li><p><b>Topological data analysis</b>: persistent homology, computation and learning with topological features.</p></li>
+  </ul>
+
+Below are a few selected ongoing projects.
+
+<h2>Topology-Informed Imaging Informatics</h2>
+<p>Thanks to decades of technology development, we are now able to visualize in high quality complex biomedical structures such as neurons, vessels, trabeculae and breast tissues. We need innovative methods to fully exploit these structures, which encode important information about underlying biological mechanisms. We propose principled approaches to seamlessly incorporate topological information, i.e., connected components, handles, loops, and branches, into different parts of a learning pipeline. Under the hood is a formulation of the topological computation as a differentiable operator, based on the theory of topological data analysis. This leads to a series of novel methods for segmentation, generation, and analysis of these topology-rich biomedical structures. </p>
+
+<p><b>Selected Publications</b>:</p>
+<ul>
+<li>
+<p>
+Fan Wang, Saarthak Kapse, Steven Liu, Prateek Prasanna, and <b>Chao Chen</b>: "TopoTxR: A Topological Biomarker for Predicting Treatment Response in Breast Cancer",
+in <i>international conference on Information Processing in Medical Imaging (<b>IPMI</b>)</i>, 2021
+</p>
+</li>
+<li>
+<p>
+Xiaoling Hu, Yusu Wang, Li Fuxin, Dimitris Samaras, <b>Chao Chen</b>: "Topology-Aware Segmentation Using Discrete Morse Theory", in <i>the Nineth International Conference on Learning Representations (<b>ICLR</b>)</i>, 2021, (Spotlight, acceptance rate for spotlight+oral = 5.6%) 
+</p>
+</li>
+
+<li>
+<p>
+Shahira Abousamra, Minh Hoai Nguyen, Dimitris Samaras, <b>Chao Chen</b>: "Localization in the Crowd with Topological Constraints", in <i>The 35th AAAI Conference in Artificial Intelligence (<b>AAAI</b>)</i>, 2021,  (acceptance rate 21%) 
+</p>
+</li>
+
+
+<li>
+<p>
+Fan Wang, Huidong Liu, Dimitris Samaras, <b>Chao Chen</b>: "TopoGAN: A Topology-Aware Generative Adversarial Network",
+in <i>European Conference on Computer Vision(<b>ECCV</b>)</i>, 2020, (<b><a href="publications/TopoGAN.pdf" title="">paper</a></b>, <b><a href="publications/TopoGAN_suppl.pdf" title="">supplemental material</a></b>, Oral, acceptance rate 2.1%).
+</p>
+</li>
+<li>
+<p>
+Xiaoling Hu, Fuxin Li, Dimitris Samaras, <b>Chao Chen</b>: "Topology-Preserving Deep Image Segmentation", in <i>the Thirty-third Conference on Neural Information Processing Systems (<b>NeurIPS</b>)</i>, 2019, (acceptance rate 21.2%)
+</p>
+</li>
+<li>
+<p>
+Pengxiang Wu, <b>Chao Chen</b>, Yusu Wang, Shaoting Zhang, Changhe Yuan, Zhen Qian, Dimitris Metaxas, Leon Axel: "Optimal Topological Cycles and Their Application in Cardiac Trabeculae Restoration",
+in <i> the 25th biennial international conference on Information Processing in Medical Imaging (<b>IPMI</b>)</i>, 2017,   
+(Oral presentation, acceptance rate 14.32%, <b><a href="publications/wu_ipmi_2017.pdf" title="">pdf</a></b>, <b><a href="https://github.com/astrolagrange/Persistent-Homology-Localization-Algorithms" title="">code</a></b>)
+</p>
+</li>
+
+</ul>
 <!-- ==================================================================================================== -->
+<h2>Robust Machine Learning</h2>
+<p>Modern machine learning faces new challenges. We are analyzing highly complex data
+with unknown noise and potentially poisonous information from attackers. These noise or
+attacks are especially dangerous to deep neural nets with strong memorization power. We investigate how to train deep nets to be robust
+against <b>label noise</b>, or robust against <b>poisoning backdoor attacks</b>. Under the hood is a unified geometric
+and topological view of the data in the latent representational space and in neuron correlation. We show that advanced
+topological and geometric tools, if tightly coupled with deep neural networks, can provide novel
+and powerful prior for robust learning. </p>
+
+<p><b>Selected Publications</b>:</p>
+
+<ul>
+
+<li>
+<p>
+Xiaoling Hu, Xiao Lin, Michael Cogswell, Yi Yao, Susmit Jha, <b>Chao Chen</b>: "Trigger Hunting with a Topological Prior for Trojan Detection", <i><a href="https://arxiv.org/abs/2110.08335" title="">arXiv</a></i>, 2021
+</p>
+</li>
+
+<li>
+<p>
+Songzhu Zheng, Yikai Zhang, Hubert Wagner, Mayank Goswami, <b>Chao Chen</b>: "Topological Detection of Trojaned Neural Networks", in <i>the Thirty-fifth Conference on Neural Information Processing Systems (<b>NeurIPS</b>)</i>, 2021, (acceptance rate 26%)
+</p>
+</li>
+
+<li>
+<p>
+Yikai Zhang, Songzhu Zheng, Pengxiang Wu, Mayank Goswami, <b>Chao Chen</b>: "Learning with feature dependent label noise: a progressive approach", in <i>the Nineth International Conference on Learning Representations (<b>ICLR</b>)</i>, 2021, (Spotlight, acceptance rate for spotlight+oral = 5.6%) 
+</p>
+</li>
+
+<li>
+<p>
+Pengxiang Wu, Songzhu Zheng, Mayank Goswami, Dimitris Metaxas, <b>Chao Chen</b>: "A Topological Filter for Learning with Label Noise", in <i>the Thirty-fourth Conference on Neural Information Processing Systems (<b>NeurIPS</b>)</i>, 2020, (acceptance rate 20.1%)
+</p>
+</li>
+<li>
+<p>
+Songzhu Zheng, Pengxiang Wu, Aman Goswami, Mayank Goswami, Dimitris Metaxas, <b>Chao Chen</b>: "Error-Bounded Correction of Noisy Labels",
+in <i>International Conference on Machine Learning (<b>ICML</b>)</i>, 2020, (acceptance rate 21.8%).
+</p>
+</li>
+<li>
+<p>
+<b>Chao Chen</b>, Xiuyan Ni, Qinxun Bai, Yusu Wang: "A Topological Regularizer for Classifiers via Persistent Homology", 
+in <i>International Conference on Artificial Intelligence and Statistics (<b>AISTATS</b>)</i>, 2019
+</p>
+</li>
+</ul>
+<!-- ==================================================================================================== -->
+<h2>Graph Neural Networks</h2>
+<p>Graph neural networks (GNNs) have shown strong learning power for graph-structured data. We improve GNNs by introducing topological and geometric constructs such as persistent homology and graph Ricci curvature as high-order multi-scale information. These methods have shown state-of-the-art performance in different tasks such as node classification, link prediction, relation prediction, etc. Most recently, we propose a novel cycle-centric GNN, which learns useful representation of rules in knowledge graphs, through the space of cycles.</p>
+
+<p><b>Selected Publications</b>:</p>
+<li>
+<p>
+Zuoyu Yan, Tengfei Ma, Liangcai Gao, Zhi Tang, <b>Chao Chen</b>: "A Topological View of Rule Learning in Knowledge Graphs", <i><a href="https://arxiv.org/abs/2110.02510" title="">arXiv</a></i>, 2021
+</p>
+</li>
+<li>
+<p>
+Zuoyu Yan, Tengfei Ma, Liangcai Gao, Zhi Tang and <b>Chao Chen</b>: "Persistence Homology for Link Prediction: An Interactive View",
+in <i>International Conference on Machine Learning (<b>ICML</b>)</i>, 2021 (acceptance rate 21.5%, <b><a href="https://arxiv.org/abs/2102.10255" title="">paper</a></b>)
+</p>
+</li>
+<li>
+<p>
+Qi Zhao, Ze Ye, Yusu Wang, <b>Chao Chen</b>: "Persistence Enhanced Graph Neural Network", 
+in <i>International Conference on Artificial Intelligence and Statistics (<b>AISTATS</b>)</i>, 2020
+</p>
+</li>
+<li>
+<p>
+Ze Ye, Kin Sum Liu, Tengfei Ma, Jie Gao, <b>Chao Chen</b>: "Curvature Graph Network", in <i>the Eighth International Conference on Learning Representations (<b>ICLR</b>)</i>, 2020,  (<b><a href="https://openreview.net/pdf?id=BylEqnVFDB" title="">pdf</a></b>, <b><a href="https://github.com/yeze16159/CurvGN" title="">code</a></b>, acceptance rate 26.5%).
+</p>
+</li>
+</ul>
+
+<!-- ==================================================================================================== -->
+<h2>Digital Pathology</h2>
+<p></p>
+
+<p><b>Selected Publications</b>:</p>
+<ul>
+<li>
+<p>
+Shahira Abousamra, David Belinsky, John Van Arnam, Felicia Allard, Eric Yee,Rajarsi Gupta, Tahsin Kurc, Dimitris Samaras, Joel Saltz, <b>Chao Chen</b>: "Multi-Class Cell Detection Using Spatial Context Representation", in <i>International Conference on Computer Vision (<b>ICCV</b>)</i>, 2021 (Oral, acceptance rate 3%)
+</p>
+</li> 
+
+<li>
+<p>
+Danielle J Fassler, Shahira Abousamra, Rajarsi Gupta, <b>Chao Chen</b>, Maozheng Zhao, David Paredes, Syeda Areeha Batool, Beatrice S Knudsen, Luisa Escobar-Hoyos, Kenneth R Shroyer, Dimitris Samaras, Tahsin Kurc, Joel Saltz: "Deep learning-based image analysis methods for brightfield-acquired multiplex immunohistochemistry images", in <i>Diagnostic pathology</i>, 2020
+</p>
+</li>
+
+<li>
+<p>
+Andrew Aukerman, Mathieu Carrière, <b>Chao Chen</b>, Kevin Gardner, Raúl Rabadán, Rami Vanguri: "Persistent Homology Based Characterization ofthe Breast Cancer Immune Microenvironment: A Feasibility Study",
+in <i>International Symposium on Computational Geometry (<b>SoCG</b>)</i>, 2020.
+</p>
+</li>
+
+<li>
+<p>
+Shahira Abousamra, Danielle Fassler, Le Hou, Yuwei Zhang, Rajarsi Gupta, Tahsin Kurc, Luisa F. Escobar-Hoyos, Dimitris Samaras, Beatrice Knudson, Kenneth Shroyer, Joel Saltz, <b >Chao Chen</b>: "Weakly-Supervised Deep Stain Decomposition for Multiplex IHC Images", in <i>IEEE International Symposium on Biomedical Imaging (<b>ISBI</b>)</i>, 2020
+</p>
+</li>
+
+</ul>
+
+
+
 
 <p><br></p>
 <div id="footer">
