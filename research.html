@@ -34,15 +34,105 @@
 <!-- ==================================================================================================== -->
 
  
-  <p>I explore geometric and topological properties of data. These global and robust information can provide
-  insight for modern data and image analytics. My research draws from the following different domains.</p>
+  <p>I develop robust and trustworthy learning methods for modern biomedical data and beyond. My research draws from the following different domains.</p>
   <ul>
-  <li><p><b>Biomedical imaging informatics</b>: topology-informed image segmentation, generation and analysis.</p></li>
-  <li><p><b>Machine learning</b>: robustness of deep neural networks, label noise, graph neural networks.</p></li>
-  <li><p><b>Topological data analysis</b>: persistent homology, computation and learning with topological features.</p></li>
+  <li><p><b>Robust and Trustworthy Machine Learning</b>: backdoor attacks, adversarial attacks, label noise, uncertainty.</p></li>
+  <li><p><b>Biomedical informatics</b>: digital pathology, multi-omics data analytics, spatial and topological analysis of tissue micorenvionment.</p></li>
+  <li><p><b>Topological data analysis</b>: learning with topological features, topology-informed image segmentation and analysis.</p></li>
   </ul>
 
 Below are a few selected ongoing projects.
+
+</ul>
+<!-- ==================================================================================================== -->
+<h2>Robust and Trustworthy Machine Learning</h2>
+<p>
+Modern machine learning faces new challenges. Large language models, vision-language models, and foundational models exhibit unprecedented representational power, achieving state-of-the-art performance in prediction and generation tasks. However, their highly complex architectures and massive model sizes also introduce significant vulnerabilities.
+</p>
+<p>
+Since 2021, I have been deeply engaged in the study of backdoor attacks (also known as Trojan attacks). Our team is particularly interested in investigating backdoor-induced structural signals, such as the geometry and topology of data and neuron connectivity. Notably, we were the first to identify and systematically analyze the abnormal concentration of attention on trigger words in backdoored BERT models [Lyu et al., 2022]. Building on this insight, we later developed novel data-efficient attack methods that exploit this phenomenon [Lyu et al., 2022].
+</p>
+<p>
+Beyond the direct abnormality in attention patterns, we explored higher-order structural changes caused by backdoor attacks. We discovered that backdoored models exhibit unique topological loops in neuron connectivity, resulting from shortcuts between shallow and deep-layer neurons. This discovery led to one of the earliest backdoor detection methods [Zheng et al., 2024]. Additionally, we introduced a novel topological loss function to analyze trigger connectivity in trigger-inversion-based detection methods [Hu et al., 2023]. Our exploration of geometry and topology in robust learning also extends to adversarial robustness [Zhang et al., 2022] and label noise robustness [Wu et al., 2020].
+</p>
+<p>
+Our research continues to evolve alongside advancements in language and vision-language models. In a recent study, we found that backdoor attacks on generative models often unintentionally disrupt the underlying language structure, compromising the coherence of triggered outputs. To mitigate this issue, we proposed "regulating" the output by ensuring that vision-language model embeddings align closely with those of a vanilla large language model [Lyu, 2024]. While this approach restores model competence, it also limits adaptability to downstream tasks due to the imposed constraints on embeddings.
+</p>
+<p>
+Can we do better in creating competent backdoored models? The key might lie in understanding the reverse process: how are structural abnormalities removed in a global backdoor mitigation process. In our earlier work explored backdoor mitigation through knowledge distillation [Pang et al., 2023]. We demonstrated that frameworks like knowledge distillation can "smooth out" structural abnormalities introduced by backdoors without explicitly identifying them. 
+</p>
+<p>
+Building on this, further research into the interplay between backdoor effectiveness, model generalization, and structural stability could offer deeper insights into both attack and defense mechanisms. By analyzing how backdoor mitigation methods alter model architecture and neuron connectivity, we may uncover strategies to design more adaptive and resilient backdoored models. Additionally, exploring alternative regularization techniques or fine-tuning approaches could help balance stealth, adaptability, and performance in these models.
+</p>
+
+<!--   We are analyzing highly complex data with unknown noise and potentially poisonous information from attackers. These noise or
+attacks are especially dangerous to deep neural nets with strong memorization power. We investigate how to train deep nets to be robust
+against <b>label noise</b>, or robust against <b>poisoning backdoor attacks</b>. Under the hood is a unified geometric
+and topological view of the data in the latent representational space and in neuron correlation. We show that advanced
+topological and geometric tools, if tightly coupled with deep neural networks, can provide novel
+and powerful prior for robust learning. </p>
+ -->
+<p><b>Selected Publications</b>:</p>
+
+<ul>
+
+<li>
+<p>
+<b>[Lyu et al. 2022]</b> Weimin Lyu, Songzhu Zheng, Tengfei Ma, <b>Chao Chen</b>: "A Study of the Attention Abnormality in Trojaned BERTs",
+in <i>The 2022 Annual Conference of the North American Chapter of the Association for Computational Linguistics (<b>NAACL</b>)</i>, 2022 (<b><a href="https://arxiv.org/abs/2205.08305" title="">paper</a></b>).
+</p>
+</li>
+
+<li>
+<p>
+<b>[Lyu et al. 2023]</b> Weimin Lyu, Songzhu Zheng, Lu Pang, Haibin Ling, <b>Chao Chen</b>: "Attention-Enhancing Backdoor Attacks Against BERT-based Models", in <i><b>EMNLP Findings</b></i>, 2023 
+</p>
+</li>
+
+<li>
+<p>
+<b>[Zheng et al. 2021]</b> Songzhu Zheng, Yikai Zhang, Hubert Wagner, Mayank Goswami, <b>Chao Chen</b>: "Topological Detection of Trojaned Neural Networks", in <i>the Thirty-fifth Conference on Neural Information Processing Systems (<b>NeurIPS</b>)</i>, 2021, (acceptance rate 26%)
+</p>
+</li>
+
+<li>
+<p>
+<b>[Hu et al. 2022]</b> Xiaoling Hu, Xiao Lin, Michael Cogswell, Yi Yao, Susmit Jha, <b>Chao Chen</b>: "Trigger Hunting with a Topological Prior for Trojan Detection", in <i>the International Conference on Learning Representations (<b>ICLR</b>)</i>, 2022
+</p>
+</li>
+
+<li>
+<p>
+<b>[Zhang et al. 2022]</b> Wenjia Zhang, Yikai Zhang, Xiaoling Hu, Mayank Goswami, <b>Chao Chen</b>, Dimitris Metaxas: "A Manifold View of Adversarial Risk", 
+in <i>International Conference on Artificial Intelligence and Statistics (<b>AISTATS</b>)</i>, 2022
+</p>
+</li>
+
+<li>
+<p>
+<b>[Wu et al. 2020]</b> Pengxiang Wu, Songzhu Zheng, Mayank Goswami, Dimitris Metaxas, <b>Chao Chen</b>: "A Topological Filter for Learning with Label Noise", in <i>the Thirty-fourth Conference on Neural Information Processing Systems (<b>NeurIPS</b>)</i>, 2020, (acceptance rate 20.1%)
+</p>
+</li>
+
+<li>
+<p>
+<b>[Lyu et al. 2024]</b> Weimin Lyu, Lu Pang, Tengfei Ma, Haibin Ling, <b>Chao Chen</b>:"TrojVLM: Backdoor Attack Against Vision Language Models", in <i>European Conference on Computer Vision (<b>ECCV</b>)</i>, 2024 (<b><a href="https://arxiv.org/abs/2409.19232" title="">paper</a></b>)
+</p>
+</li>
+
+<li><p>
+  <b>[Lyu et al. 2025]</b> Weimin Lyu, Jiachen Yao, Saumya Gupta, Lu Pang, Tao Sun, Lingjie Yi, Lijie Hu, Haibin Ling, <b>Chao Chen</b>:"Backdooring Vision-Language Models with Out-Of-Distribution Data", in <i>The International Conference on Learning Representations (<b>ICLR</b>)</i>, 2025
+</p></li>
+
+<li>
+<p>
+<b>[Pang et al. 2023]</b> Lu Pang, Tao Sun, Haibin Ling, <b>Chao Chen</b>: "Backdoor Cleansing with Unlabeled Data",
+in <i>IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>)</i>, 2023,  (<b><a href="https://arxiv.org/abs/2211.12044">paper</a></b>).
+</p>
+</li>
+
+</ul>
+
 
 <h2>Topology-Informed Imaging Informatics</h2>
 <p>Thanks to decades of technology development, we are now able to visualize in high quality complex biomedical structures such as neurons, vessels, trabeculae and breast tissues. We need innovative methods to fully exploit these structures, which encode important information about underlying biological mechanisms. We propose principled approaches to seamlessly incorporate topological information, i.e., connected components, handles, loops, and branches, into different parts of a learning pipeline. Under the hood is a formulation of the topological computation as a differentiable operator, based on the theory of topological data analysis. This leads to a series of novel methods for segmentation, generation, and analysis of these topology-rich biomedical structures. </p>
@@ -86,58 +176,9 @@ in <i> the 25th biennial international conference on Information Processing in M
 (Oral presentation, acceptance rate 14.32%, <b><a href="publications/wu_ipmi_2017.pdf" title="">pdf</a></b>, <b><a href="https://github.com/astrolagrange/Persistent-Homology-Localization-Algorithms" title="">code</a></b>)
 </p>
 </li>
-
 </ul>
-<!-- ==================================================================================================== -->
-<h2>Robust Machine Learning</h2>
-<p>Modern machine learning faces new challenges. We are analyzing highly complex data
-with unknown noise and potentially poisonous information from attackers. These noise or
-attacks are especially dangerous to deep neural nets with strong memorization power. We investigate how to train deep nets to be robust
-against <b>label noise</b>, or robust against <b>poisoning backdoor attacks</b>. Under the hood is a unified geometric
-and topological view of the data in the latent representational space and in neuron correlation. We show that advanced
-topological and geometric tools, if tightly coupled with deep neural networks, can provide novel
-and powerful prior for robust learning. </p>
 
-<p><b>Selected Publications</b>:</p>
 
-<ul>
-
-<li>
-<p>
-Xiaoling Hu, Xiao Lin, Michael Cogswell, Yi Yao, Susmit Jha, <b>Chao Chen</b>: "Trigger Hunting with a Topological Prior for Trojan Detection", <i><a href="https://arxiv.org/abs/2110.08335" title="">arXiv</a></i>, 2021
-</p>
-</li>
-
-<li>
-<p>
-Songzhu Zheng, Yikai Zhang, Hubert Wagner, Mayank Goswami, <b>Chao Chen</b>: "Topological Detection of Trojaned Neural Networks", in <i>the Thirty-fifth Conference on Neural Information Processing Systems (<b>NeurIPS</b>)</i>, 2021, (acceptance rate 26%)
-</p>
-</li>
-
-<li>
-<p>
-Yikai Zhang, Songzhu Zheng, Pengxiang Wu, Mayank Goswami, <b>Chao Chen</b>: "Learning with feature dependent label noise: a progressive approach", in <i>the Nineth International Conference on Learning Representations (<b>ICLR</b>)</i>, 2021, (Spotlight, acceptance rate for spotlight+oral = 5.6%) 
-</p>
-</li>
-
-<li>
-<p>
-Pengxiang Wu, Songzhu Zheng, Mayank Goswami, Dimitris Metaxas, <b>Chao Chen</b>: "A Topological Filter for Learning with Label Noise", in <i>the Thirty-fourth Conference on Neural Information Processing Systems (<b>NeurIPS</b>)</i>, 2020, (acceptance rate 20.1%)
-</p>
-</li>
-<li>
-<p>
-Songzhu Zheng, Pengxiang Wu, Aman Goswami, Mayank Goswami, Dimitris Metaxas, <b>Chao Chen</b>: "Error-Bounded Correction of Noisy Labels",
-in <i>International Conference on Machine Learning (<b>ICML</b>)</i>, 2020, (acceptance rate 21.8%).
-</p>
-</li>
-<li>
-<p>
-<b>Chao Chen</b>, Xiuyan Ni, Qinxun Bai, Yusu Wang: "A Topological Regularizer for Classifiers via Persistent Homology", 
-in <i>International Conference on Artificial Intelligence and Statistics (<b>AISTATS</b>)</i>, 2019
-</p>
-</li>
-</ul>
 <!-- ==================================================================================================== -->
 <h2>Graph Neural Networks</h2>
 <p>Graph neural networks (GNNs) have shown strong learning power for graph-structured data. We improve GNNs by introducing topological and geometric constructs such as persistent homology and graph Ricci curvature as high-order multi-scale information. These methods have shown state-of-the-art performance in different tasks such as node classification, link prediction, relation prediction, etc. Most recently, we propose a novel cycle-centric GNN, which learns useful representation of rules in knowledge graphs, through the space of cycles.</p>
